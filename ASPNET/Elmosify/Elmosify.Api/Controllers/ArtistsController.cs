@@ -13,7 +13,14 @@ namespace Elmosify.Api.Controllers
     [ApiController]
     public class ArtistsController : ControllerBase
     {
-        ArtistsService artistsService = new ArtistsService();
+        private readonly IArtistsService artistsService;
+
+        //ArtistsService artistsService = new ArtistsService();
+
+        public ArtistsController(IArtistsService artistsService)
+        {
+            this.artistsService = artistsService;
+        }
 
         [HttpGet]
         public IActionResult Get()
@@ -38,8 +45,16 @@ namespace Elmosify.Api.Controllers
 
         [HttpPost]
         public IActionResult Post(Artist a) {
+            //if (!ModelState.IsValid) return BadRequest();
             var newArtist = artistsService.AddArtist(a);
-            return Ok(newArtist);
+            //return Created("http://" + newArtist.Id, newArtist);
+            return CreatedAtAction("get", newArtist);
+        }
+
+        [HttpDelete]
+        public IActionResult Delete(Artist a) {
+            // db actions
+            return NoContent();
         }
     }
 }
