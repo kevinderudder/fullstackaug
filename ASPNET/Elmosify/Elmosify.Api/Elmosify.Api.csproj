@@ -15,6 +15,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Elmosify.Models\Elmosify.Models.csproj" />
+    <ProjectReference Include="..\Elmosify.Repositories\Elmosify.Repositories.csproj" />
     <ProjectReference Include="..\Elmosify.Services\Elmosify.Services.csproj" />
   </ItemGroup>
 

@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Parkings\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ParkingsApp.Models\ParkingsApp.Models.csproj" />
+    <ProjectReference Include="..\ParkingsApp.Repositories\ParkingsApp.Repositories.csproj" />
+  </ItemGroup>
+
+</Project>

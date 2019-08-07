@@ -1,4 +1,7 @@
-﻿using Elmosify.Services.Artists;
+﻿using Elmosify.Models.People;
+using Elmosify.Repositories;
+using Elmosify.Repositories.Artists;
+using Elmosify.Services.Artists;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
@@ -14,5 +17,8 @@ namespace Elmosify.Api
             services.AddTransient<IArtistsService, ArtistsService>();
         }
 
+        public static void RegisterRepositories(this IServiceCollection services) {
+            services.AddTransient<IRepository<Artist>, ArtistsRepository>();
+        }
     }
 }
