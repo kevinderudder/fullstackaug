@@ -1,0 +1,22 @@
+@import '../../scss/settings/s.colors.scss';
+@import '../../scss/settings/s.dimensions.scss';
+
+.c-parking{
+    background: $parking-default-color;
+    color: white;
+
+    width: $parking-square-size;
+    height: $parking-square-size;
+
+    text-align: center;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    .c-parking__icon{
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 100px;
+    }
+}

@@ -1,0 +1,11 @@
+.c-parking-list{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items:center;
+
+    .c-parking-list__item{
+        margin: 10px;
+    }
+}
